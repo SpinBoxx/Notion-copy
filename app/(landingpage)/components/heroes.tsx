@@ -22,14 +22,14 @@ const Heroes = () => {
           <Image
             src="/reading.png"
             fill
-            className="object-contains dark:hidden"
+            className="object-contain dark:hidden"
             alt="Readings"
           />
           <Image
             src="/reading-dark.png"
             fill
             className="hidden object-contain dark:block"
-            alt="Documents"
+            alt="Readings"
           />
         </div>
       </div>
