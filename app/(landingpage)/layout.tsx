@@ -9,7 +9,7 @@ const LandingPageLayout = ({ children }: Props) => {
   return (
     <div className="h-full">
       <Navbar />
-      <main className="h-full pt-40 dark:bg-neutral-800">{children}</main>
+      <main className="h-full pt-40 ">{children}</main>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "../../../components/ui/button";
 import { useConvexAuth } from "convex/react";
 import Skeleton from "@/components/ui/skeleton";
+import Link from "next/link";
 
 const Header = () => {
   const { isAuthenticated, isLoading } = useConvexAuth();
@@ -18,9 +19,11 @@ const Header = () => {
         Jotion is the connected workspace where better, faster work happens
       </h3>
       {isAuthenticated && !isLoading && (
-        <Button>
-          Enter Jotion <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
+        <Link href="/documents">
+          <Button className="mt-4">
+            Enter Jotion <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
       )}
       {!isAuthenticated && isLoading && (
         <Skeleton className="mt-4" width={140} height={40} />
